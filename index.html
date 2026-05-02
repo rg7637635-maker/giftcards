@@ -2662,6 +2662,330 @@ Luxury PDF:  ( ₹1999)
 ✅ Editable text fields
 ✅ Bulk digital orders
 ✅ WhatsApp pre-filled digital messages
-    </script>
+    </script <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital GiftCards - Beautiful PDF Previews | 9855656884</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B6B; --secondary: #FECA57; --accent: #48CAE4;
+            --success: #27AE60; --whatsapp: #25D366; --digital: #6366F1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #2C3E50; }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed; width: 70px; height: 70px; bottom: 30px; right: 30px;
+            background: linear-gradient(135deg, var(--whatsapp), #128C7E); color: white;
+            border-radius: 50%; font-size: 32px; text-align: center;
+            box-shadow: 0 8px 25px rgba(37,211,102,0.4); z-index: 10000; cursor: pointer;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            gap: 5px; transition: all 0.3s; animation: whatsappPulse 2s infinite;
+        }
+
+        @keyframes whatsappPulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.08);} }
+
+        /* Header */
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 1rem 0;
+            position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+
+        nav { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between;
+            align-items: center; padding: 0 2rem; }
+
+        .logo { font-size: 2.2rem; font-weight: 800; background: linear-gradient(45deg, white, #FFEAA7);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, rgba(99,102,241,0.95), rgba(139,92,246,0.9)),
+            url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f0f9ff" width="1200" height="800"/><circle fill="%236366F1" opacity="0.4" cx="200" cy="200" r="150"/><circle fill="%238B5CF6" opacity="0.4" cx="900" cy="300" r="120"/></svg>');
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; color: white; margin-top: 80px; }
+
+        .hero h1 { font-size: clamp(3rem, 6vw, 5rem); font-weight: 800; margin-bottom: 1rem; }
+
+        /* REAL CARD PREVIEWS */
+        .preview-container {
+            position: relative; max-width: 400px; margin: 2rem auto; height: 550px;
+            perspective: 1000px;
+        }
+
+        .card-preview {
+            width: 100%; height: 100%; position: relative;
+            transform-style: preserve-3d; transition: transform 0.6s;
+            cursor: pointer; border-radius: 20px; box-shadow: 0 25px 80px rgba(0,0,0,0.2);
+        }
+
+        .card-preview:hover { transform: rotateY(-10deg) rotateX(5deg) translateZ(20px); }
+
+        .card-front, .card-back {
+            position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
+            border-radius: 20px; padding: 3rem; box-sizing: border-box;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; font-family: inherit;
+        }
+
+        .card-back { background: linear-gradient(135deg, #f8f9fa, #e9ecef); transform: rotateY(180deg); }
+
+        /* BIRTHDAY CARD PREVIEW */
+        .birthday-preview .card-front {
+            background: linear-gradient(135deg, #FF9A8B 0%, #FECFEF 50%, #FFCCCB 100%);
+            color: #8B0000; position: relative; overflow: hidden;
+        }
+
+        .birthday-preview .card-front::before {
+            content: '🎈🎂🎉'; font-size: 4rem; position: absolute; top: 20px; left: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        .birthday-title {
+            font-family: 'Dancing Script', cursive; font-size: 3.5rem; font-weight: 700;
+            margin-bottom: 1rem; text-shadow: 0 4px 15px rgba(255,0,0,0.3);
+        }
+
+        .birthday-message {
+            font-size: 1.4rem; margin-bottom: 1.5rem; font-weight: 500;
+            max-width: 300px; line-height: 1.5;
+        }
+
+        .birthday-name { font-size: 2.2rem; font-weight: 800; color: #D32F2F; margin: 1rem 0; }
+
+        /* MARRIAGE CARD PREVIEW */
+        .marriage-preview .card-front {
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 50%, #FDD835 100%);
+            color: #B7950B; position: relative;
+        }
+
+        .marriage-preview .card-front::before {
+            content: '💍💕✨'; font-size: 3.5rem; position: absolute; top: 25px; right: 25px;
+        }
+
+        .marriage-title {
+            font-family: 'Great Vibes', cursive; font-size: 4rem; margin-bottom: 1rem;
+            text-shadow: 0 4px 20px rgba(255,215,0,0.4);
+        }
+
+        .couple-names {
+            font-size: 1.8rem; font-weight: 700; margin: 1.5rem 0;
+            background: linear-gradient(45deg, #FFD700, #FFA500); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ANNIVERSARY CARD */
+        .anniversary-preview .card-front {
+            background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 50%, #A5D6A7 100%);
+            color: #2E7D32;
+        }
+
+        /* LUXURY CARD */
+        .luxury-preview .card-front {
+            background: linear-gradient(135deg, #1A237E 0%, #3F51B5 50%, #5C6BC0 100%);
+            color: white; position: relative;
+        }
+
+        .luxury-preview .card-front::before {
+            content: '✨⭐💎'; font-size: 3rem; position: absolute; top: 20px; left: 20px;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes bounce { 0%,20%,50%,80%,100%{transform:translateY(0);} 40%{transform:translateY(-20px);} 60%{transform:translateY(-10px);} }
+        @keyframes sparkle { 0%,100%{opacity:0.5; transform:scale(1);} 50%{opacity:1; transform:scale(1.2);} }
+
+        .preview-price {
+            position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+            background: rgba(255,255,255,0.9); padding: 0.8rem 1.5rem;
+            border-radius: 25px; font-weight: 700; font-size: 1.3rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Buttons */
+        .download-btn {
+            background: linear-gradient(135deg, var(--success), #22C55E); color: white;
+            border: none; padding: 1.2rem 2.5rem; border-radius: 50px; font-size: 1.1rem;
+            font-weight: 600; cursor: pointer; transition: all 0.3s; margin: 0.5rem;
+            box-shadow: 0 10px 30px rgba(39,174,96,0.4); display: flex; align-items: center;
+            gap: 0.8rem; justify-content: center;
+        }
+
+        .download-btn:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(39,174,96,0.6); }
+
+        .whatsapp-order { background: linear-gradient(135deg, var(--whatsapp), #128C7E) !important;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.4) !important; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .preview-container { max-width: 350px; height: 480px; }
+            .birthday-title { font-size: 2.8rem !important; }
+            .marriage-title { font-size: 3.2rem !important; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">🎁 Digital GiftCards</a>
+            <div class="digital-badge">
+                <i class="fas fa-download"></i> SEE PREVIEWS • INSTANT PDF
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div>
+            <h1>👀 See Real Card Previews</h1>
+            <p style="font-size: 1.4rem; max-width: 700px; margin: 2rem auto;">
+                Click cards to see <strong>EXACT DESIGN</strong> with sample text. 
+                Happy? Download PDF instantly! 📥
+            </p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#birthday" class="download-btn">
+                    <i class="fas fa-birthday-cake"></i> Birthday Preview
+                </a>
+                <a href="#marriage" class="download-btn whatsapp-order" onclick="openWhatsApp('Show me marriage card preview!')">
+                    <i class="fas fa-ring"></i> Marriage Preview
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIRTHDAY CARD PREVIEW -->
+    <section class="cards-section" id="birthday">
+        <h2 class="section-title" style="text-align: center;">🎂 Birthday Card Preview</h2>
+        <div class="preview-container">
+            <div class="card-preview birthday-preview" onclick="flipCard(this)">
+                <!-- FRONT -->
+                <div class="card-front">
+                    <div class="birthday-title">Happy Birthday!</div>
+                    <div class="birthday-name">Priya</div>
+                    <div class="birthday-message">
+                        Wishing you a day filled with<br>
+                        love, laughter & sweet memories! 🎈
+                    </div>
+                    <div style="margin-top: 2rem; font-size: 1.1rem; opacity: 0.9;">
+                        Age: 25 | From: Your Best Friend 💕
+                    </div>
+                </div>
+                <!-- BACK -->
+                <div class="card-back">
+                    <i class="fas fa-file-pdf" style="font-size: 4rem; color: var(--digital); margin-bottom: 1rem;"></i>
+                    <h3>Digital PDF Ready!</h3>
+                    <p>✅ Editable names/age<br>✅ 300 DPI Print Quality<br>✅ Instant Download</p>
+                    <div class="preview-price">₹199</div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <button class="download-btn" onclick="downloadCard('birthday')" style="font-size: 1.3rem;">
+                <i class="fas fa-download"></i> Download Birthday PDF ₹199
+            </button>
+            <button class="download-btn whatsapp-order" onclick="whatsappOrder('Birthday PDF Preview - I LOVE IT!')" style="font-size: 1.3rem;">
+                <i class="fab fa-whatsapp"></i> Customize 9855656884
+            </button>
+        </div>
+    </section>
+
+    <!-- MARRIAGE CARD PREVIEW -->
+    <section class="cards-section" id="marriage" style="background: linear-gradient(135deg, #FFF8E1, #FFECB3);">
+        <h2 class="section-title" style="color: #B7950B;">💍 Marriage Anniversary Preview</h2>
+        <div class="preview-container">
+            <div class="card-preview marriage-preview" onclick="flipCard(this)">
+                <!-- FRONT -->
+                <div class="card-front">
+                    <div class="marriage-title">Forever Together</div>
+                    <div class="couple-names">Rahul & Priya</div>
+                    <div style="font-size: 1.5rem; margin: 2rem 0; font-weight: 500;">
+                        Celebrating 5 Wonderful Years 💕
+                    </div>
+                    <div style="font-size: 1.1rem; opacity: 0.9;">
+                        15th February 2024
+                    </div>
+                </div>
+                <!-- BACK -->
+                <div class="card-back">
+                    <i class="fas fa-file-pdf" style="font-size: 4rem; color: var(--digital); margin-bottom: 1rem;"></i>
+                    <h3>Premium PDF Ready!</h3>
+                    <p>✅ Custom couple names<br>✅ Editable dates<br>✅ Gold foil effect</p>
+                    <div class="preview-price">₹399</div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <button class="download-btn" onclick="downloadCard('marriage')" style="font-size: 1.3rem;">
+                <i class="fas fa-download"></i> Download Marriage PDF ₹399
+            </button>
+            <button class="download-btn whatsapp-order" onclick="whatsappOrder('Marriage Anniversary PDF - Perfect Design!')" style="font-size: 1.3rem;">
+                <i class="fab fa-whatsapp"></i> Customize Names 9855656884
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-hero">
+        <h2 style="font-size: 3.5rem;">⚡ Loved the Previews?</h2>
+        <p style="font-size: 1.4rem;">Get your personalized PDF in 5 minutes!</p>
+        <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
+            <button class="download-btn" onclick="openWhatsApp('Loved the card previews! 🎉 Send me my personalized PDF.')" style="font-size: 1.3rem; padding: 1.5rem 3rem;">
+                <i class="fab fa-whatsapp"></i> Order via WhatsApp 9855656884
+            </button>
+            <button class="download-btn" onclick="callNow()" style="font-size: 1.3rem; padding: 1.5rem 3rem; background: linear-gradient(135deg, var(--primary), var(--secondary));">
+                <i class="fas fa-phone"></i> Call 9855656884
+            </button>
+        </div>
+        <p style="margin-top: 2rem; opacity: 0.9;">✉️ rg7637635@gmail.com | Instant Digital Delivery</p>
+    </section>
+
+    <!-- WhatsApp -->
+    <div class="whatsapp-float" onclick="openWhatsApp('Hi! I saw your beautiful card previews 🎁')">
+        <i class="fab fa-whatsapp"></i> <span>Chat</span>
+    </div>
+
+    <script>
+        function flipCard(card) {
+            card.style.transform = card.style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+        }
+
+        function downloadCard(type) {
+            const link = document.createElement('a');
+            link.href = '#'; // Real PDF link
+            link.download = `Beautiful_${type}_Card.pdf`;
+            link.click();
+            alert(`🎉 ${type.toUpperCase()} PDF Downloaded!\n✅ Real preview design\n✅ Editable text\n✅ Print ready!`);
+        }
+
+        function openWhatsApp(msg = '') {
+            const phone = '9855656884';
+            const defaultMsg = 'Hi! 🎁 I love your card designs\n\n';
+            window.open(`https://wa.me/919855656884?text=${encodeURIComponent(defaultMsg + msg)}`, '_blank');
+        }
+
+        function whatsappOrder(msg) {
+            openWhatsApp(msg);
+        }
+
+        function callNow() {
+            window.open('tel:+919855656884');
+        }
+    </script 🎈🎂🎉 Happy Birthday! 🎂🎈
+
+Priya
+
+Wishing you a day filled with love, laughter & sweet memories!
+
+Age: 25 | From: Your Best Friend 💕
+💍💕✨ Forever Together ✨💕💍
+
+Rahul & Priya
+
+Celebrating 5 Wonderful Years 💕
+
+15th February 2024
+    
 </body>
 </html>
