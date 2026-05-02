@@ -1629,7 +1629,571 @@
         });
 
         // Initialize cart count on load
-        updateCartCount();
+        updateCartCount(<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftCards Bliss - Professional Celebration Cards | 9855656884</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            --secondary: #FECA57;
+            --accent: #48CAE4;
+            --dark: #2C3E50;
+            --light: #F8F9FA;
+            --success: #27AE60;
+            --whatsapp: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 70px;
+            height: 70px;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--whatsapp), #128C7E);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            z-index: 10000;
+            cursor: pointer;
+            animation: whatsappPulse 2s infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes whatsappPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, white, #FFEAA7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        .contact-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .contact-phone:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, rgba(255,107,107,0.95), rgba(254,202,87,0.9)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f0f9ff" width="1200" height="800"/><circle fill="%23FF6B6B" opacity="0.3" cx="200" cy="200" r="150"/><circle fill="%23FECA57" opacity="0.3" cx="900" cy="300" r="120"/><circle fill="%2348CAE4" opacity="0.3" cx="600" cy="500" r="100"/></svg>');
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Professional Cards Section */
+        .cards-section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 4rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 3rem;
+        }
+
+        .pro-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.12);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            height: 500px;
+        }
+
+        .pro-card:hover {
+            transform: translateY(-20px) scale(1.02);
+            box-shadow: 0 40px 100px rgba(0,0,0,0.2);
+        }
+
+        /* PROFESSIONAL CARD IMAGES WITH SVG */
+        .card-image {
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Anniversary Card - Real Design */
+        .anniversary .card-image {
+            background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 50%, #FED3E7 100%);
+        }
+
+        .anniversary .card-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 6rem;
+            color: #E91E63;
+            text-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Birthday Card - Colorful */
+        .birthday .card-image {
+            background: linear-gradient(135deg, #A8E6CF 0%, #FF8E8E 25%, #FFD1A2 50%, #A8E6CF 75%, #FF8E8E 100%);
+            background-size: 300% 300%;
+            animation: gradientShift 4s ease infinite;
+        }
+
+        .birthday .card-icon {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5rem;
+            color: #FF5722;
+            text-shadow: 0 4px 20px rgba(255, 87, 34, 0.5);
+        }
+
+        /* Wedding Card - Elegant Gold */
+        .wedding .card-image {
+            background: linear-gradient(135deg, #FAD0C4 0%, #FFD1FF 50%, #C4F4F4 100%);
+            position: relative;
+        }
+
+        .wedding .card-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.8) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.6) 0%, transparent 50%);
+        }
+
+        .wedding .card-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5.5rem;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 4px 12px rgba(255,215,0,0.5));
+        }
+
+        /* Luxury Card - Premium */
+        .luxury .card-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luxury .card-image::before {
+            content: '★ ★ ★ ★ ★';
+            position: absolute;
+            top: 20%;
+            right: -20%;
+            font-size: 4rem;
+            color: rgba(255,215,0,0.1);
+            animation: sparkle 2s linear infinite;
+        }
+
+        .luxury .card-icon {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4.5rem;
+            color: white;
+            text-shadow: 0 4px 25px rgba(0,0,0,0.5);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+            50% { transform: translate(-50%, -50%) translateY(-15px); }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+
+        .card-content {
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .card-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 1.5rem 0;
+        }
+
+        .order-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+        }
+
+        .order-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255,107,107,0.6);
+        }
+
+        .whatsapp-order {
+            background: linear-gradient(135deg, var(--whatsapp), #128C7E) !important;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.4) !important;
+            margin-top: 1rem;
+            display: block;
+        }
+
+        /* Contact Section */
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-details {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.2);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cards-grid { grid-template-columns: 1fr; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 60px; height: 60px; font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">🎁 GiftCards Bliss</a>
+            <div class="contact-info">
+                <div class="contact-phone" onclick="callNow()">
+                    <i class="fas fa-phone"></i>
+                    <strong>9855656884</strong>
+                </div>
+                <div class="contact-phone" onclick="openWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    <strong>WhatsApp</strong>
+                </div>
+                <a href="mailto:rg7637635@gmail.com" class="contact-phone">
+                    <i class="fas fa-envelope"></i>
+                    Email Us
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div>
+            <h1>🏆 Professional Gift Cards</h1>
+            <p style="font-size: 1.4rem; max-width: 600px; margin: 0 auto 2rem;">
+                Premium quality celebration cards for Anniversaries, Birthdays, Weddings & more.<br>
+                <strong>📞 9855656884 | ✉️ rg7637635@gmail.com</strong>
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#cards" class="order-btn" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+                    <i class="fas fa-gift"></i> View Collection
+                </a>
+                <a href="#" onclick="openWhatsApp()" class="order-btn whatsapp-order">
+                    <i class="fab fa-whatsapp"></i> Order Now 9855656884
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Cards -->
+    <section class="cards-section" id="cards">
+        <h2 class="section-title">🎨 Professional Card Collection</h2>
+        <div class="cards-grid">
+            <!-- Anniversary Card -->
+            <div class="pro-card anniversary">
+                <div class="card-image">
+                    <i class="fas fa-heart card-icon"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">💕 Anniversary Bliss</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">
+                        Elegant rose gold design with heartfelt messages. Perfect for love milestones.
+                    </p>
+                    <div class="card-price">₹999</div>
+                    <button class="order-btn" onclick="orderCard('Anniversary Bliss - ₹999')">
+                        <i class="fas fa-shopping-cart"></i> Buy Now
+                    </button>
+                    <button class="order-btn whatsapp-order" onclick="whatsappOrder('Anniversary Bliss - ₹999')" style="margin-top: 0.5rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp 9855656884
+                    </button>
+                </div>
+            </div>
+
+            <!-- Birthday Card -->
+            <div class="pro-card birthday">
+                <div class="card-image">
+                    <i class="fas fa-birthday-cake card-icon"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">🎂 Birthday Magic</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">
+                        Vibrant rainbow design with balloons & cake. Custom age & name printing.
+                    </p>
+                    <div class="card-price">₹699</div>
+                    <button class="order-btn" onclick="orderCard('Birthday Magic - ₹699')">
+                        <i class="fas fa-shopping-cart"></i> Buy Now
+                    </button>
+                    <button class="order-btn whatsapp-order" onclick="whatsappOrder('Birthday Magic - ₹699')" style="margin-top: 0.5rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp 9855656884
+                    </button>
+                </div>
+            </div>
+
+            <!-- Wedding Card -->
+            <div class="pro-card wedding">
+                <div class="card-image">
+                    <i class="fas fa-ring card-icon"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">💍 Wedding Elegance</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">
+                        Premium pearl white with gold foil rings. Luxury wedding invitation style.
+                    </p>
+                    <div class="card-price">₹1299</div>
+                    <button class="order-btn" onclick="orderCard('Wedding Elegance - ₹1299')">
+                        <i class="fas fa-shopping-cart"></i> Buy Now
+                    </button>
+                    <button class="order-btn whatsapp-order" onclick="whatsappOrder('Wedding Elegance - ₹1299')" style="margin-top: 0.5rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp 9855656884
+                    </button>
+                </div>
+            </div>
+
+            <!-- Luxury Card -->
+            <div class="pro-card luxury">
+                <div class="card-image">
+                    <i class="fas fa-crown card-icon"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">👑 Luxury Premium</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">
+                        24K gold foil, crystal gems, velvet texture. Ultimate luxury gifting.
+                    </p>
+                    <div class="card-price">₹1999</div>
+                    <button class="order-btn" onclick="orderCard('Luxury Premium - ₹1999')">
+                        <i class="fas fa-shopping-cart"></i> Buy Now
+                    </button>
+                    <button class="order-btn whatsapp-order" onclick="whatsappOrder('Luxury Premium - ₹1999')" style="margin-top: 0.5rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp 9855656884
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <h2 style="font-size: 3rem; margin-bottom: 1rem;">📞 Ready to Order?</h2>
+        <p style="font-size: 1.3rem; margin-bottom: 2rem;">Contact us instantly for bulk orders & customizations</p>
+        <div class="contact-details">
+            <div class="contact-item">
+                <i class="fas fa-phone" style="font-size: 3rem; color: white; margin-bottom: 1rem; display: block;"></i>
+                <h3>Call Now</h3>
+                <p style="font-size: 1.5rem; font-weight: 700; margin: 0;">9855656884</p>
+                <button class="order-btn" onclick="callNow()" style="margin-top: 1rem;">📞 Call</button>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp" style="font-size: 3rem; color: white; margin-bottom: 1rem; display: block;"></i>
+                <h3>WhatsApp</h3>
+                <p style="font-size: 1.5rem; font-weight: 700; margin: 0;">9855656884</p>
+                <button class="order-btn whatsapp-order" onclick="openWhatsApp()" style="margin-top: 1rem;">💬 Chat Now</button>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope" style="font-size: 3rem; color: white; margin-bottom: 1rem; display: block;"></i>
+                <h3>Email</h3>
+                <p style="font-size: 1.2rem; font-weight: 700; margin: 0;">rg7637635@gmail.com</p>
+                <a href="mailto:rg7637635@gmail.com" class="order-btn" style="margin-top: 1rem; background: rgba(255,255,255,0.2);">
+                    ✉️ Send Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+        <span>9855656884</span>
+    </div>
+
+    <script>
+        // WhatsApp Integration - 9855656884
+        function openWhatsApp(customMessage = '') {
+            const phone = '9855656884';
+            const defaultMessage = 'Hi! 🎁 I want to order professional gift cards\n\n';
+            const fullMessage = encodeURIComponent(defaultMessage + customMessage);
+            window.open(`https://wa.me/919855656884?text=${fullMessage}`, '_blank');
+        }
+
+        function whatsappOrder(product) {
+            openWhatsApp(`I want to order: ${product}\nPlease send details & availability.`);
+        }
+
+        function callNow() {
+            window.open('tel:+919855656884');
+        }
+
+        function orderCard(product) {
+            // Add to cart or direct WhatsApp
+            if (confirm(`Order ${product}?\n\nRedirecting to WhatsApp...`)) {
+                whatsappOrder(product);
+            }
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });✅ WhatsApp: https://wa.me/919855656884
+✅ Phone: tel:+919855656884
+✅ Email: rg7637635@gmail.com
+✅ Admin: rg7637635@gmail.com / rg7637635
     </script>
 </body>
 </html>
+    
